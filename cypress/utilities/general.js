@@ -1,3 +1,8 @@
+import {
+  password,
+  randomEmail,
+  randomString,
+} from "../../cypress/Constants/constants.js";
 import fish from "../fixtures/fish.json";
 import locators from "../fixtures/locators.json";
 import orderplaced from "../fixtures/orderplaced.json";
@@ -5,11 +10,7 @@ import payment from "../fixtures/payment.json";
 import register from "../fixtures/register.json";
 import shoppingcart from "../fixtures/shoppingcart.json";
 import welcome from "../fixtures/welcome.json";
-import {
-    password,
-    randomEmail,
-    randomString,
-} from "C:/Users/harshada.firake/CypressAutomation/cypress/Constants/constants.js";
+
 // beforeEach(function () {
 //     cy.fixture('locators').then(function(data)
 //     {

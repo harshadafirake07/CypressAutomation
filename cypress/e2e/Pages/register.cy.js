@@ -5,7 +5,7 @@ import {
   proceed_to_checkout,
   proceed_to_payment,
   registration, welcomeMenu
-} from "C:/Users/harshada.firake/CypressAutomation/cypress/utilities/general.js";
+} from "../../utilities/general.js";
 
 describe("Registration test suite", function () {
   it("Registration form test case", function () {

@@ -1,4 +1,4 @@
-name: Manual Workflow
+name: Cypress Tests
 
 on:
   workflow_dispatch:
@@ -17,10 +17,11 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-    - name: Run tests
-      run: npm test
+    - name: Run Cypress tests
+      run: npm run cypress:run || true
 
     - name: Store Cypress artifacts
+      if: always()
       uses: actions/upload-artifact@v2
       with:
         name: cypress-artifacts

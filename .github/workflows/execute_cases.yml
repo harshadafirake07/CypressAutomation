@@ -19,3 +19,11 @@ jobs:
 
     - name: Run tests
       run: npm test
+
+    - name: Store Cypress artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: cypress-artifacts
+        path: |
+          cypress/ss/screenshots
+          cypress/videos

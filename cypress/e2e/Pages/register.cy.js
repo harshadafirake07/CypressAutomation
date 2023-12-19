@@ -27,6 +27,5 @@ describe("Registration test suite", function () {
     proceed_to_checkout();
     proceed_to_payment();
     order_placed_verification();
-    registration();
   });
 });

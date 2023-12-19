@@ -9,7 +9,8 @@ module.exports = defineConfig({
     },
     specPattern: "cypress/e2e/Pages/*.cy.js",
     screenshotsFolder: 'cypress/ss/screenshots',
-    videosFolder: 'cypress/vv/videos'
+    videosFolder: 'cypress/videos',
+    video: true
     
   },
 });

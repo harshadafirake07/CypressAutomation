@@ -1,4 +1,0 @@
-{
-    "paymentContinueButton":"input[name='newOrder']",
-    "paymentProceedButton":"a.Button[href='/actions/Order.action?newOrder=&confirmed=true']"
-}

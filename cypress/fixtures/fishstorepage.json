@@ -1,0 +1,4 @@
+{
+    "angelFish":"a[href='/actions/Catalog.action?viewProduct=&productId=FI-SW-01']",
+    "angelFishAddToCart":"table tr:nth-child(2) td:nth-child(5) a"
+}

@@ -3,13 +3,13 @@ import {
   randomEmail,
   randomString,
 } from "../../cypress/Constants/constants.js";
-import fish from "../fixtures/fish.json";
-import locators from "../fixtures/locators.json";
-import orderplaced from "../fixtures/orderplaced.json";
-import payment from "../fixtures/payment.json";
-import register from "../fixtures/register.json";
-import shoppingcart from "../fixtures/shoppingcart.json";
-import welcome from "../fixtures/welcome.json";
+import fishstorepage from "../fixtures/fishstorepage.json";
+import ordersuccesspage from "../fixtures/ordersuccesspage.json";
+import paymentpage from "../fixtures/paymentpage.json";
+import registerpage from "../fixtures/registerpage.json";
+import cartpage from "../fixtures/cartpage.json";
+import signinpage from "../fixtures/signinpage.json";
+import welcomepage from "../fixtures/welcomepage.json";
 
 // beforeEach(function () {
 //     cy.fixture('locators').then(function(data)
@@ -23,8 +23,8 @@ const {
   signInUsername,
   signOnbutton,
   signInSuccessfull,
-  url,
-} = locators;
+  Url,
+} = signinpage;
 const {
   registerAddressLine1,
   registerButton,
@@ -32,42 +32,42 @@ const {
   registerCountry,
   registerCreateAccount,
   registerEmail,
-  registerFirstname,
-  regsiterLastname,
+  registerFirstName,
+  registerLastName,
   registerPassword,
-  registerZipcode,
+  registerZipCode,
   registerUsername,
   registerState,
   registerRepeatPassword,
   registerPhoneNumber,
-} = register;
+} = registerpage;
 
-const { welcome_text, welcome_Fishmenu } = welcome;
-const { angleFish, angleFish_addToCart } = fish;
-const { proceedToCheckout } = shoppingcart;
-const { paymentContinueButton, paymentProceedButton } = payment;
-const { orderPlacedSuccessMessage } = orderplaced;
+const { welcomeText, welcomeFishMenu } = welcomepage;
+const { angelFish, angelFishAddToCart } = fishstorepage;
+const { proceedToCheckout } = cartpage;
+const { paymentContinueButton, paymentProceedButton } = paymentpage;
+const { orderPlacedSuccessMessage } = ordersuccesspage;
 
 export function registration() {
   // cy.fixture('locators').then((data) =>{
   //     const loginLocators = data.login;
   //     const registerLocators = data.register;
   //cy.commonWait();
-  cy.visit(url);
+  cy.visit(Url);
   cy.get(signInbutton).click();
   cy.get(registerButton).click();
   cy.get(registerUsername).type(randomString);
   cy.get(registerPassword).type(password);
   cy.get(registerRepeatPassword).type(password);
-  cy.get(registerFirstname).type(randomString);
-  cy.get(regsiterLastname).type("firake");
-  cy.get(registerPhoneNumber).type("2345678900");
+  cy.get(registerFirstName).type(randomString);
+  cy.get(registerLastName).type(randomString);
+  cy.get(registerPhoneNumber).type(randomString);
   cy.get(registerEmail).type(randomEmail);
-  cy.get(registerAddressLine1).type("test");
-  cy.get(registerCity).type("chicago");
-  cy.get(registerState).type("IL");
-  cy.get(registerZipcode).type("60647");
-  cy.get(registerCountry).type("US");
+  cy.get(registerAddressLine1).type(randomString);
+  cy.get(registerCity).type(randomString);
+  cy.get(registerState).type(randomString);
+  cy.get(registerZipCode).type(randomString);
+  cy.get(registerCountry).type(randomString);
   cy.get(registerCreateAccount).click();
   cy.get(signInSuccessfull).should("be.visible");
 }
@@ -76,7 +76,7 @@ export function login() {
   //   cy.fixture("locators").then((data) => {
   //     const loginLocators = data.login;
 
-  cy.visit(url);
+  cy.visit(Url);
   cy.get(signInbutton).click();
   cy.get(signInUsername).clear().type(randomString);
   cy.get(signInPassword).clear().type(password);
@@ -85,16 +85,16 @@ export function login() {
 }
 
 export function welcomeMenu() {
-  cy.get(welcome_text)
+  cy.get(welcomeText)
     .invoke("text")
     .invoke("trim")
     .should("eq", `Welcome ${randomString}!`);
-  cy.get(welcome_Fishmenu).click();
+  cy.get(welcomeFishMenu).click();
 }
 
 export function add_to_cart() {
-  cy.get(angleFish).click();
-  cy.get(angleFish_addToCart).click();
+  cy.get(angelFish).click();
+  cy.get(angelFishAddToCart).click();
 }
 
 export function proceed_to_checkout() {

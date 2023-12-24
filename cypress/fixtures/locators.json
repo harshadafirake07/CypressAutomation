@@ -1,8 +1,0 @@
-{
-  "signInbutton": "div#MenuContent :nth-last-child(3)",
-  "signInPassword": "input[name='password']",
-  "signInUsername": "input[name='username']",
-  "signOnbutton": "input[name='signon']",
-  "signInSuccessfull": "#QuickLinks > [href='/actions/Catalog.action?viewCategory=&categoryId=FISH']",
-  "url": "https://petstore.octoperf.com/actions/Catalog.action"
-}

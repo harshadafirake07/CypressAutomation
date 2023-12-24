@@ -1,0 +1,3 @@
+{
+    "proceedToCheckout":"#Cart a.Button[href='/actions/Order.action?newOrderForm=']"
+}

@@ -1,0 +1,16 @@
+{
+    "registerAddressLine1": "input[name='account.address1']",
+    "registerButton": "div#Catalog a[href='/actions/Account.action?newAccountForm=']",
+    "registerCity": "input[name='account.city']",
+    "registerCountry": "input[name='account.country']",
+    "registerCreateAccount": "input[name='newAccount']",
+    "registerEmail": "input[name='account.email']",
+    "registerFirstName": "input[name='account.firstName']",
+    "registerLastName": "input[name='account.lastName']",
+    "registerPassword": "input[name='password']",
+    "registerPhoneNumber": "input[name='account.phone']",
+    "registerRepeatPassword": "input[name='repeatedPassword']",
+    "registerState": "input[name='account.state']",
+    "registerUsername": "input[name='username']",
+    "registerZipCode": "input[name='account.zip']"
+}

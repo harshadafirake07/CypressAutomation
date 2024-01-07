@@ -13,7 +13,6 @@ jobs:
     env:
       CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      CYPRESS_REPORTER: mochawesome
 
     steps:
       - name: Checkout
@@ -24,4 +23,3 @@ jobs:
         with:
           record: true
           parallel: true
-          reporter: ${{ env.CYPRESS_REPORTER }}
